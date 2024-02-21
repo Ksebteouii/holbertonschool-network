@@ -2,10 +2,9 @@
 # Bash script to ping an IP address passed as an argument.
 
 # Check if exactly one argument (IP address) is provided
-if [ $# -ne 1 ]; then
+if [[ $# eq 0 ]]; 
+then
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
-    exit 1
+    exit 
 fi
 
-# Ping the provided IP address 5 times
-ping -c 5 "$1"
